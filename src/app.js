@@ -22,6 +22,29 @@ window.onload = function() {
     let concatenated = item[Math.floor(Math.random() * item.length)];
     return concatenated;
   }
+
+  function ArrayConcatenator(who, action, what, when) {
+    let sentence = who + " " + action + " " + what + " " + when;
+
+    return sentence;
+  }
+  const concatenatedSentence = ArrayConcatenator(
+    ArrayPicker(who),
+    ArrayPicker(action),
+    ArrayPicker(what),
+    ArrayPicker(when)
+  );
+
+  document.getElementById("excuse").innerHTML = concatenatedSentence;
+  console.log("Hello Rigo from the console!");
+};
+
+/*window.onload = function() {
+  //write your code here
+  function ArrayPicker(item) {
+    let concatenated = item[Math.floor(Math.random() * item.length)];
+    return concatenated;
+  }
   function ArrayConcatenator(who, action, what, when) {
     let sentence = who + " " + action + " " + what + " " + when;
     return sentence;
@@ -42,4 +65,4 @@ window.onload = function() {
   document.addEventListener("DOMContentLoaded", WriteToHtml);
 
   console.log("Hello Rigo from the console!");
-};
+};*/
