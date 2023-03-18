@@ -18,21 +18,23 @@ let when = [
 
 window.onload = function() {
   //write your code here
-  function ArrayPicker(item) {
-    let concatenated = item[Math.floor(Math.random() * item.length)];
-    return concatenated;
-  }
 
-  function ArrayConcatenator(who, action, what, when) {
+  // function arrayPicker(item) {
+  //   let concatenated = item[Math.floor(Math.random() * item.length)];
+  //   return concatenated;
+  // }
+  const arrayPicker = item => item[Math.floor(Math.random() * item.length)];
+
+  function arrayConcatenator(who, action, what, when) {
     let sentence = who + " " + action + " " + what + " " + when;
 
     return sentence;
   }
-  const concatenatedSentence = ArrayConcatenator(
-    ArrayPicker(who),
-    ArrayPicker(action),
-    ArrayPicker(what),
-    ArrayPicker(when)
+  const concatenatedSentence = arrayConcatenator(
+    arrayPicker(who),
+    arrayPicker(action),
+    arrayPicker(what),
+    arrayPicker(when)
   );
 
   document.getElementById("excuse").innerHTML = concatenatedSentence;
